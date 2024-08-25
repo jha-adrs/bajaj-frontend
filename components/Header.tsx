@@ -6,6 +6,10 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { Button } from "./ui/button"
+import { z } from "zod"
+import { FormComponent } from "./Form"
+
 
 interface HeaderProps {
 
@@ -13,7 +17,7 @@ interface HeaderProps {
 
 export const Header = ({ }: HeaderProps) => {
     return (
-        <Card className="rounded-md">
+        <Card className=" rounded-md w-full max-w-screen md:max-w-lg">
             <CardHeader>
                 <CardTitle>
                     Welcome to my Next.js project
@@ -22,15 +26,15 @@ export const Header = ({ }: HeaderProps) => {
                     Created by Aadarsh Jha, 21BCE0360
                 </CardDescription>
             </CardHeader>
-            <CardContent>
-                <p>Card Content</p>
+            <CardContent className="flex flex-col gap-4">
+                <FormComponent />
             </CardContent>
-            <CardFooter className="flex flex-col">
+            <CardFooter className="flex flex-col gap-3">
                 <p>
-                    Tech Stack used Frontend: Next.js, TailwindCSS, TypeScript, Vercel
+                    Tech Stack used Frontend: NextJS, TailwindCSS, TypeScript, Vercel
                 </p>
-                <p>
-                    Tech Stack used Backend: Node.JS , Express, Docker, AWS
+                <p className="font-medium">
+                    Tech Stack used Backend: NodeJS , Express, AWS App Runner, Docker
                 </p>
             </CardFooter>
         </Card>
