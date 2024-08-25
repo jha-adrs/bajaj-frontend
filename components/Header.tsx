@@ -29,12 +29,14 @@ export const Header = ({ }: HeaderProps) => {
             <CardContent className="flex flex-col gap-4">
                 <FormComponent />
             </CardContent>
-            <CardFooter className="flex flex-col gap-3">
+            <CardFooter className="flex flex-col gap-3 font-medium items-start justify-start">
                 <p>
-                    Tech Stack used Frontend: NextJS, TailwindCSS, TypeScript, Vercel
+                    Tech Stack used Frontend: <p className="font-semibold">NextJS, TailwindCSS, TypeScript, Vercel</p>
                 </p>
                 <p className="font-medium">
-                    Tech Stack used Backend: NodeJS , Express, AWS App Runner, Docker
+                    Tech Stack used Backend: <p className="font-semibold">
+                    NodeJS , Express, AWS App Runner, Docker
+                    </p>
                 </p>
             </CardFooter>
         </Card>
