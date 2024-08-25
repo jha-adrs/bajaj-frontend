@@ -159,7 +159,7 @@ export const FormComponent = () => {
                             apiData ? (attributes?.map((att, index) => {
                                 const curr = selectOptions.find((val) => val.label == att.label)
                                 return (
-                                    <div className="inline-flex">
+                                    <div key={index} className="inline-flex">
                                         {
                                             curr ? (
                                                 <div className="flex flex-row items-center gap-2">
